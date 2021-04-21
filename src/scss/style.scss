@@ -1,0 +1,228 @@
+$text: #757575;
+$bg: white;
+$font: "Open Sans", sans-serif;
+$navText: #333;
+$navPad: 0.2rem;
+$mainWeight: 300;
+
+body {
+	color: $text;
+	background: $bg;
+	font-family: $font;
+	margin: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: $mainWeight;
+	background: $bg;
+	box-shadow: 0px 4px 14px 0px #0000000f;
+
+	.content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		color: $navText;
+		margin: none;
+		.title {
+			margin-right: 2rem;
+		}
+	}
+
+	.fa-search {
+		padding: 1rem;
+		color: #8b8b8b;
+		border-left: 1px solid #d3d3d3;
+	}
+
+	.user-icons i {
+		padding: 0.5rem;
+		font-size: x-large;
+	}
+	.user-name {
+		color: #9cb2be;
+	}
+	.welcome {
+		font-size: small;
+		font-weight: 400;
+		padding-right: 1rem;
+	}
+	input {
+		outline: none;
+		border-top: none;
+		border-right: none;
+		border-left: none;
+		border-bottom: 1px solid #8b8b8b;
+	}
+}
+.page-head {
+	background: linear-gradient(
+			64.12deg,
+			rgba(51, 51, 51, 0.8) 34.6%,
+			rgba(255, 255, 255, 0) 100%
+		),
+		url(../images/stagetimebanner.png);
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+	color: white;
+	font-weight: $mainWeight;
+	height: 50vh;
+	.title-container {
+		display: flex;
+		align-items: flex-end;
+		transform: translate(10%, 75%);
+		width: inherit;
+		margin: 0 0 0 0;
+		.org-name {
+			font-weight: $mainWeight;
+			font-size: 3rem;
+			width: 10ch;
+			line-height: 4rem;
+			margin: 0;
+			padding-left: 1rem;
+		}
+		img {
+			height: 7rem;
+			border-radius: 7px;
+			border: 1px solid white;
+		}
+	}
+	.location-container {
+		display: flex;
+		align-items: flex-end;
+		transform: translate(10%, 200%);
+	}
+}
+
+.org-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	padding: 1rem;
+	.org-nav-links a {
+		text-decoration: none;
+		color: white;
+		padding-left: 6rem;
+		font-size: small;
+	}
+	.org-nav-socials i {
+		text-decoration: none;
+		color: white;
+		background-color: #949494;
+
+		padding: 0.7rem;
+		border-radius: 100%;
+		margin-right: 2rem;
+	}
+}
+
+.page-container {
+	padding: 5rem 10rem;
+	.about {
+		.about-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			h1 {
+				font-weight: $mainWeight;
+				margin: 0;
+			}
+			p {
+				margin: 0;
+			}
+			.divider {
+				border-bottom: 1px solid #d9d9d9;
+				flex-grow: 1;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				margin: 5px 20px;
+			}
+		}
+		.about-content {
+			display: grid;
+			grid-template-columns: 30% 50% 20%;
+			padding-top: 3rem;
+			.about-location p {
+				margin: 0;
+				font-size: small;
+				padding-right: 15ch;
+			}
+			.about-paragraph {
+				padding-right: 0.2rem;
+				width: clamp(45ch, 50%, 75ch);
+				line-height: 32px;
+			}
+			.about-details {
+				font-size: small;
+				svg {
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+	.events-content {
+		h1 {
+			font-weight: $mainWeight;
+			margin: 0;
+		}
+		.events-head {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			.event-sort {
+				font-size: small;
+				padding: 0.5rem 0.2rem 0 0.2rem;
+				color: #b0b0b0;
+			}
+			.filter-option {
+				font-size: small;
+				padding: 0 0.4rem;
+			}
+			.divider {
+				border-bottom: 1px solid #d9d9d9;
+				flex-grow: 1;
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				margin: 5px 20px;
+			}
+		}
+		.events-grid {
+			display: grid;
+			grid-template-columns: 50% 50%;
+			column-gap: 10px;
+			.event-card {
+				background: #f6f6f6;
+				border-radius: 20px;
+				margin: 5rem 5rem 5rem 0;
+				height: 60%;
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				.date-cube {
+					text-align: center;
+					background-color: white;
+					padding: 2rem;
+					border-radius: 15px;
+					height: 6rem;
+					width: 6rem;
+					.month {
+						margin: 0 0 1rem 0;
+					}
+					.day {
+						font-size: 4em;
+						margin: -2rem 0 0 0;
+					}
+				}
+				.event-details {
+					h2 {
+						font-weight: $mainWeight;
+					}
+					p {
+						font-size: small;
+					}
+				}
+			}
+		}
+	}
+}
